@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Harshal Ahire - Full Stack Software Engineer Portfolio" />
+  <title>Harshal Ahire | Full Stack Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: "#0B0F17",
+            indigoGlow: "#6366F1",
+            emeraldGlow: "#10B981",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"],
+          },
+          boxShadow: {
+            neon: "0 0 0 1px rgba(255,255,255,0.08), 0 0 25px rgba(99,102,241,0.22)",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background: #0B0F17;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+        radial-gradient(circle at 20% 20%, rgba(99,102,241,0.14), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(16,185,129,0.10), transparent 40%);
+      background-size: 32px 32px, 32px 32px, 100% 100%, 100% 100%;
+      color: #E5E7EB;
+    }
+    .glass {
+      background: rgba(17, 24, 39, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(14px);
+    }
+    .stats-img { width: 100%; max-width: 100%; border-radius: 0.75rem; }
+    .social-glow:hover { box-shadow: 0 0 18px rgba(99,102,241,0.45); }
+    .filter-btn.active { background: linear-gradient(90deg, #6366F1, #10B981); color: white; border-color: transparent; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="sticky top-3 z-50 px-4">
+    <nav class="glass mx-auto max-w-6xl rounded-2xl px-4 py-3 shadow-neon">
+      <div class="flex items-center justify-between">
+        <a href="#about" class="font-mono text-xl font-bold text-indigoGlow">&lt;HA /&gt;</a>
+        <button id="menuBtn" class="md:hidden rounded-lg border border-white/10 p-2 text-white" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul id="navLinks" class="hidden md:flex items-center gap-5 text-sm text-slate-200">
+          <li><a href="#about" class="hover:text-indigo-300">About</a></li>
+          <li><a href="#experience" class="hover:text-indigo-300">Experience</a></li>
+          <li><a href="#stats" class="hover:text-indigo-300">Stats</a></li>
+          <li><a href="#certifications" class="hover:text-indigo-300">Certifications</a></li>
+          <li><a href="#education" class="hover:text-indigo-300">Education</a></li>
+          <li><a href="#contact" class="hover:text-indigo-300">Contact</a></li>
+          <li>
+            <a href="https://drive.google.com/file/d/1_Z-seH6qL-KdDSBFa0Wo305U---fVHr0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-indigoGlow px-4 py-2 font-medium text-white hover:opacity-90">Download Resume</a>
+          </li>
+        </ul>
+      </div>
+      <ul id="mobileNav" class="mt-3 hidden space-y-2 border-t border-white/10 pt-3 text-sm md:hidden">
+        <li><a href="#about" class="block rounded px-2 py-1 hover:bg-white/10">About</a></li>
+        <li><a href="#experience" class="block rounded px-2 py-1 hover:bg-white/10">Experience</a></li>
+        <li><a href="#stats" class="block rounded px-2 py-1 hover:bg-white/10">Stats</a></li>
+        <li><a href="#certifications" class="block rounded px-2 py-1 hover:bg-white/10">Certifications</a></li>
+        <li><a href="#education" class="block rounded px-2 py-1 hover:bg-white/10">Education</a></li>
+        <li><a href="#contact" class="block rounded px-2 py-1 hover:bg-white/10">Contact</a></li>
+        <li>
+          <a href="https://drive.google.com/file/d/1_Z-seH6qL-KdDSBFa0Wo305U---fVHr0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="mt-1 block rounded-lg bg-indigoGlow px-4 py-2 text-center font-medium text-white">Download Resume</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 pb-16 pt-10">
+    <section id="about" class="glass rounded-3xl p-8 md:p-12">
+      <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+        <div>
+          <p class="mb-3 inline-flex items-center rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300">Open to Full Stack Opportunities</p>
+          <h1 class="text-4xl font-extrabold text-white md:text-5xl">Harshal Ahire</h1>
+          <p class="mt-2 text-lg text-indigo-300">Software Engineer — <span id="typingText" class="font-semibold text-white"></span></p>
+          <p class="mt-5 max-w-3xl text-slate-300">Software Engineer with 1.8 years of hands-on experience engineering scalable B2B SaaS platforms, distributed REST APIs, and high-throughput data processing workflows.</p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">Python</span>
+            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">Java / Spring Boot</span>
+            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">React</span>
+            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">PostgreSQL</span>
+            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">REST APIs</span>
+            <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">GenAI</span>
+          </div>
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="#experience" class="rounded-lg bg-indigoGlow px-5 py-2.5 font-semibold text-white hover:opacity-90">View Experience</a>
+            <a href="#contact" class="rounded-lg border border-white/20 px-5 py-2.5 font-semibold hover:bg-white/10">Quick Connect</a>
+            <a href="https://drive.google.com/file/d/1_Z-seH6qL-KdDSBFa0Wo305U---fVHr0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-emerald-400/40 px-5 py-2.5 font-semibold text-emerald-300 hover:bg-emerald-500/10">Download Resume</a>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-2 text-center text-slate-300">
+          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.linkedin.com/in/ahire-harshal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-lg"></i></a>
+          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://github.com/harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
+          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://leetcode.com/u/harshal14ahire/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fa-solid fa-code text-lg"></i></a>
+          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://medium.com/@harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="Medium"><i class="fa-brands fa-medium text-lg"></i></a>
+          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://x.com/harshal_ah87612" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.threads.net/@harshal__ahire" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fa-brands fa-threads text-lg"></i></a>
+          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.instagram.com/harshal__ahire" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram text-lg"></i></a>
+          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-emerald-300" href="mailto:harshal14ahire@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope text-lg"></i></a>
+          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-emerald-300" href="tel:+917350552784" aria-label="Phone"><i class="fa-solid fa-phone text-lg"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="mt-10 grid gap-6">
+      <article class="glass rounded-2xl p-6">
+        <h2 class="text-2xl font-bold text-white">Work Experience</h2>
+        <p class="mt-2 text-lg text-emerald-300">ILMTEC Solutions — Software Development Engineer (Full Stack / Backend)</p>
+        <p class="mt-1 text-sm text-slate-400">02/2025 – 07/2026 (1 Year 8 Months) | Pune, India</p>
+        <ul class="mt-4 list-inside list-disc space-y-2 text-slate-200">
+          <li>Architected backend services, APIs, and data processing workflows using Python and Spring Boot, securing a <strong>70% data processing performance improvement</strong>.</li>
+          <li>Designed and maintained PostgreSQL schemas and enterprise analytics pipelines.</li>
+          <li>Engineered responsive React UI components integrated with RESTful backend services.</li>
+          <li>Formulated comprehensive test automation suites (Selenium, API testing).</li>
+        </ul>
+      </article>
+      <article class="glass rounded-2xl p-6">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <h3 class="text-xl font-bold text-white">Project Highlights</h3>
+          <div class="flex flex-wrap gap-2">
+            <button class="filter-btn active rounded-full border border-white/20 px-3 py-1 text-xs" data-filter="all">All</button>
+            <button class="filter-btn rounded-full border border-white/20 px-3 py-1 text-xs" data-filter="backend">Backend</button>
+            <button class="filter-btn rounded-full border border-white/20 px-3 py-1 text-xs" data-filter="frontend">Frontend</button>
+            <button class="filter-btn rounded-full border border-white/20 px-3 py-1 text-xs" data-filter="ai">AI</button>
+          </div>
+        </div>
+        <div class="mt-4 grid gap-4 md:grid-cols-3">
+          <div class="project-card rounded-xl border border-white/10 bg-white/5 p-4" data-category="backend">
+            <p class="font-semibold text-white">SaaS Data Processing Core</p>
+            <p class="mt-1 text-sm text-slate-300">High-throughput APIs and workflow engine with measurable performance gains.</p>
+          </div>
+          <div class="project-card rounded-xl border border-white/10 bg-white/5 p-4" data-category="frontend">
+            <p class="font-semibold text-white">React Operations UI</p>
+            <p class="mt-1 text-sm text-slate-300">Reusable responsive components for B2B dashboards and analytics views.</p>
+          </div>
+          <div class="project-card rounded-xl border border-white/10 bg-white/5 p-4" data-category="ai">
+            <p class="font-semibold text-white">Fraud Detection Research</p>
+            <p class="mt-1 text-sm text-slate-300">Award-recognized machine learning research for fraud detection signals.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="stats" class="mt-10">
+      <h2 class="text-2xl font-bold text-white">Live Developer Stats</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2">
+        <div class="glass rounded-2xl p-4">
+          <img class="stats-img" src="https://github-readme-stats.vercel.app/api?username=harshal14ahire&show_icons=true&theme=dark&hide_border=true&bg_color=111827" alt="GitHub Stats" />
+        </div>
+        <div class="glass rounded-2xl p-4">
+          <img class="stats-img" src="https://streak-stats.demolab.com/?user=harshal14ahire&theme=dark&hide_border=true&background=111827" alt="GitHub Streak" />
+        </div>
+        <div class="glass rounded-2xl p-4 md:col-span-2">
+          <img class="stats-img" src="https://leetcard.jacoblin.cool/harshal14ahire?theme=dark&ext=activity" alt="LeetCode Stats" />
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="mt-10">
+      <h2 class="text-2xl font-bold text-white">Certifications & Badges</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2">
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-white">Spring Boot 4, Spring 7 &amp; Hibernate for Beginners</h3>
+          <p class="mt-1 text-sm text-slate-300">Udemy</p>
+          <a class="mt-4 inline-flex rounded-lg border border-indigo-400/50 px-4 py-2 text-sm text-indigo-300 hover:bg-indigo-500/10" target="_blank" rel="noopener noreferrer" href="https://www.udemy.com/certificate/UC-dc1df637-82ca-4f22-9da4-b558b3ab1dc4/">Verify Credential</a>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-white">Search with MongoDB</h3>
+          <p class="mt-1 text-sm text-slate-300">MongoDB / Credly</p>
+          <a class="mt-4 inline-flex rounded-lg border border-indigo-400/50 px-4 py-2 text-sm text-indigo-300 hover:bg-indigo-500/10" target="_blank" rel="noopener noreferrer" href="https://www.credly.com/badges/92f31604-76b8-4d39-a102-9b67f9009910/public_url">Verify Credential</a>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-white">Building AI Agents with MongoDB</h3>
+          <p class="mt-1 text-sm text-slate-300">MongoDB / Credly</p>
+          <a class="mt-4 inline-flex rounded-lg border border-indigo-400/50 px-4 py-2 text-sm text-indigo-300 hover:bg-indigo-500/10" target="_blank" rel="noopener noreferrer" href="https://www.credly.com/badges/238421f6-ab51-4cca-9e69-9101f6079330/public_url">Verify Credential</a>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-white">MongoDB Indexing Design Fundamentals</h3>
+          <p class="mt-1 text-sm text-slate-300">MongoDB / Credly</p>
+          <a class="mt-4 inline-flex rounded-lg border border-indigo-400/50 px-4 py-2 text-sm text-indigo-300 hover:bg-indigo-500/10" target="_blank" rel="noopener noreferrer" href="https://www.credly.com/badges/377229d6-cd50-4d09-b0f6-800a9d6cbc75/public_url">Verify Credential</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="mt-10">
+      <h2 class="text-2xl font-bold text-white">Education & Verified Documents</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2">
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-white">Master of Science in Computer Science</h3>
+          <p class="mt-1 text-sm text-slate-300">Indira College of Commerce and Science, Pune (2024 – 2026)</p>
+          <a href="https://drive.google.com/file/d/1Yf_c8e9yASqiRidqBDdthAtpev8_GSRs/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex rounded-lg border border-emerald-400/50 px-4 py-2 text-sm text-emerald-300 hover:bg-emerald-500/10">View Document</a>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-white">Bachelor of Science in Computer Science</h3>
+          <p class="mt-1 text-sm text-slate-300">K.A.A.N.M.S Arts, Commerce & Science College, Satana, Nashik (2021 – 2024)</p>
+          <a href="https://drive.google.com/file/d/1dYJriz9_SzOKJ3npTuTCy_4INphSd0tg/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex rounded-lg border border-emerald-400/50 px-4 py-2 text-sm text-emerald-300 hover:bg-emerald-500/10">View Document</a>
+        </article>
+      </div>
+      <article class="glass mt-4 rounded-2xl p-5">
+        <h3 class="font-semibold text-white">Research & Awards</h3>
+        <ul class="mt-2 list-inside list-disc space-y-1 text-sm text-slate-300">
+          <li>Best Research Paper Award — <em>Fraud Detection Using Machine Learning</em>.</li>
+          <li>Zonal Level Aavishkar 2024 — <em>Smart Student Attendance System</em>.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="contact" class="mt-10">
+      <h2 class="text-2xl font-bold text-white">Contact Hub</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2">
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-white">Quick Copy</h3>
+          <div class="mt-3 space-y-3">
+            <button class="copy-btn flex w-full items-center justify-between rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-left hover:bg-white/10" data-copy="harshal14ahire@gmail.com">
+              <span>Email: harshal14ahire@gmail.com</span><span class="text-xs text-emerald-300">Copy</span>
+            </button>
+            <button class="copy-btn flex w-full items-center justify-between rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-left hover:bg-white/10" data-copy="+91 7350552784">
+              <span>Phone: +91 7350552784</span><span class="text-xs text-emerald-300">Copy</span>
+            </button>
+          </div>
+          <p id="copyStatus" class="mt-3 text-sm text-emerald-300" role="status" aria-live="polite"></p>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-white">Social Dock</h3>
+          <div class="mt-3 grid grid-cols-3 gap-3">
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 text-center hover:text-indigo-300" href="https://www.linkedin.com/in/ahire-harshal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 text-center hover:text-indigo-300" href="https://github.com/harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 text-center hover:text-indigo-300" href="https://leetcode.com/u/harshal14ahire/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 text-center hover:text-indigo-300" href="https://medium.com/@harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="Medium"><i class="fa-brands fa-medium"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 text-center hover:text-indigo-300" href="https://x.com/harshal_ah87612" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 text-center hover:text-indigo-300" href="https://www.threads.net/@harshal__ahire" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 text-center hover:text-indigo-300" href="https://www.instagram.com/harshal__ahire" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 text-center hover:text-emerald-300" href="mailto:harshal14ahire@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 text-center hover:text-emerald-300" href="tel:+917350552784" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 py-8">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-sm text-slate-400 md:flex-row">
+      <p>© <span id="year"></span> Harshal Ahire • Full Stack Software Engineer</p>
+      <div class="flex items-center gap-3">
+        <a class="social-glow rounded-lg border border-white/10 px-2 py-1 hover:text-indigo-300" href="https://github.com/harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a class="social-glow rounded-lg border border-white/10 px-2 py-1 hover:text-indigo-300" href="https://www.linkedin.com/in/ahire-harshal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a class="social-glow rounded-lg border border-white/10 px-2 py-1 hover:text-indigo-300" href="https://x.com/harshal_ah87612" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+    menuBtn.addEventListener("click", () => mobileNav.classList.toggle("hidden"));
+    mobileNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => mobileNav.classList.add("hidden")));
+
+    const words = ["Full Stack", "Backend", "Frontend", "API Architect"];
+    const typingText = document.getElementById("typingText");
+    let wordIndex = 0, charIndex = 0, deleting = false;
+    function animateTyping() {
+      const current = words[wordIndex];
+      typingText.textContent = current.slice(0, charIndex);
+      if (!deleting && charIndex < current.length) charIndex++;
+      else if (deleting && charIndex > 0) charIndex--;
+      else {
+        deleting = !deleting;
+        if (!deleting) wordIndex = (wordIndex + 1) % words.length;
+      }
+      setTimeout(animateTyping, deleting ? 60 : charIndex === current.length ? 1200 : 110);
+    }
+    animateTyping();
+
+    document.querySelectorAll(".filter-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const filter = btn.dataset.filter;
+        document.querySelectorAll(".project-card").forEach((card) => {
+          card.classList.toggle("hidden", !(filter === "all" || card.dataset.category === filter));
+        });
+      });
+    });
+
+    const copyStatus = document.getElementById("copyStatus");
+    document.querySelectorAll(".copy-btn").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(btn.dataset.copy);
+          copyStatus.textContent = `${btn.dataset.copy} copied to clipboard`;
+        } catch {
+          copyStatus.textContent = "Clipboard permission denied";
+        }
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
