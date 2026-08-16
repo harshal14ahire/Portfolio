@@ -48,6 +48,14 @@
       backdrop-filter: blur(14px);
     }
     .stats-img { width: 100%; max-width: 100%; border-radius: 0.75rem; }
+    .profile-img {
+      width: 11rem;
+      height: 11rem;
+      border-radius: 9999px;
+      border: 2px solid rgba(99, 102, 241, 0.6);
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.25);
+    }
     .social-glow:hover { box-shadow: 0 0 18px rgba(99,102,241,0.45); }
     .filter-btn.active { background: linear-gradient(90deg, #6366F1, #10B981); color: white; border-color: transparent; }
   </style>
@@ -108,16 +116,19 @@
             <a href="https://drive.google.com/file/d/1_Z-seH6qL-KdDSBFa0Wo305U---fVHr0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-emerald-400/40 px-5 py-2.5 font-semibold text-emerald-300 hover:bg-emerald-500/10">Download Resume</a>
           </div>
         </div>
-        <div class="grid grid-cols-3 gap-2 text-center text-slate-300">
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.linkedin.com/in/ahire-harshal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://github.com/harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://leetcode.com/u/harshal14ahire/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fa-solid fa-code text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://medium.com/@harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="Medium"><i class="fa-brands fa-medium text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://x.com/harshal_ah87612" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.threads.net/@harshal__ahire" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fa-brands fa-threads text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.instagram.com/harshal__ahire" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-emerald-300" href="mailto:harshal14ahire@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-emerald-300" href="tel:+917350552784" aria-label="Phone"><i class="fa-solid fa-phone text-lg"></i></a>
+        <div class="flex flex-col items-center gap-4">
+          <img class="profile-img" src="https://drive.google.com/uc?export=view&id=1TGtjB_3-BfHwu9ksm6DMSviu1vFLQjGf" alt="Harshal Ahire profile photo" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/harshal14ahire';" />
+          <div class="grid grid-cols-3 gap-2 text-center text-slate-300">
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.linkedin.com/in/ahire-harshal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://github.com/harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://leetcode.com/u/harshal14ahire/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fa-solid fa-code text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://medium.com/@harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="Medium"><i class="fa-brands fa-medium text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://x.com/harshal_ah87612" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.threads.net/@harshal__ahire" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fa-brands fa-threads text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.instagram.com/harshal__ahire" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-emerald-300" href="mailto:harshal14ahire@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-emerald-300" href="tel:+917350552784" aria-label="Phone"><i class="fa-solid fa-phone text-lg"></i></a>
+          </div>
         </div>
       </div>
     </section>
@@ -172,6 +183,11 @@
         </div>
         <div class="glass rounded-2xl p-4 md:col-span-2">
           <img class="stats-img" src="https://leetcard.jacoblin.cool/harshal14ahire?theme=dark&ext=activity" alt="LeetCode Stats" />
+        </div>
+        <div class="glass rounded-2xl p-4 md:col-span-2">
+          <a href="https://github.com/harshal14ahire" target="_blank" rel="noopener noreferrer">
+            <img class="stats-img" src="https://ghchart.rshah.org/6366F1/harshal14ahire" alt="GitHub contribution calendar" />
+          </a>
         </div>
       </div>
     </section>
