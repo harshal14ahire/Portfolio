@@ -48,6 +48,14 @@
       backdrop-filter: blur(14px);
     }
     .stats-img { width: 100%; max-width: 100%; border-radius: 0.75rem; }
+    .profile-img {
+      width: 11rem;
+      height: 11rem;
+      border-radius: 9999px;
+      border: 2px solid rgba(99, 102, 241, 0.6);
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.25);
+    }
     .social-glow:hover { box-shadow: 0 0 18px rgba(99,102,241,0.45); }
     .filter-btn.active { background: linear-gradient(90deg, #6366F1, #10B981); color: white; border-color: transparent; }
   </style>
@@ -62,6 +70,7 @@
         </button>
         <ul id="navLinks" class="hidden md:flex items-center gap-5 text-sm text-slate-200">
           <li><a href="#about" class="hover:text-indigo-300">About</a></li>
+          <li><a href="#skills" class="hover:text-indigo-300">Skills</a></li>
           <li><a href="#experience" class="hover:text-indigo-300">Experience</a></li>
           <li><a href="#stats" class="hover:text-indigo-300">Stats</a></li>
           <li><a href="#certifications" class="hover:text-indigo-300">Certifications</a></li>
@@ -74,6 +83,7 @@
       </div>
       <ul id="mobileNav" class="mt-3 hidden space-y-2 border-t border-white/10 pt-3 text-sm md:hidden">
         <li><a href="#about" class="block rounded px-2 py-1 hover:bg-white/10">About</a></li>
+        <li><a href="#skills" class="block rounded px-2 py-1 hover:bg-white/10">Skills</a></li>
         <li><a href="#experience" class="block rounded px-2 py-1 hover:bg-white/10">Experience</a></li>
         <li><a href="#stats" class="block rounded px-2 py-1 hover:bg-white/10">Stats</a></li>
         <li><a href="#certifications" class="block rounded px-2 py-1 hover:bg-white/10">Certifications</a></li>
@@ -90,9 +100,8 @@
     <section id="about" class="glass rounded-3xl p-8 md:p-12">
       <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
         <div>
-          <p class="mb-3 inline-flex items-center rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300">Open to Full Stack Opportunities</p>
           <h1 class="text-4xl font-extrabold text-white md:text-5xl">Harshal Ahire</h1>
-          <p class="mt-2 text-lg text-indigo-300">Software Engineer — <span id="typingText" class="font-semibold text-white"></span></p>
+          <p class="mt-2 text-lg text-indigo-300"><span id="typingText" class="font-semibold text-white">Software Engineer - Full Stack</span></p>
           <p class="mt-5 max-w-3xl text-slate-300">Software Engineer with 1.8 years of hands-on experience engineering scalable B2B SaaS platforms, distributed REST APIs, and high-throughput data processing workflows.</p>
           <div class="mt-5 flex flex-wrap gap-2">
             <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">Python</span>
@@ -108,17 +117,66 @@
             <a href="https://drive.google.com/file/d/1_Z-seH6qL-KdDSBFa0Wo305U---fVHr0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-emerald-400/40 px-5 py-2.5 font-semibold text-emerald-300 hover:bg-emerald-500/10">Download Resume</a>
           </div>
         </div>
-        <div class="grid grid-cols-3 gap-2 text-center text-slate-300">
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.linkedin.com/in/ahire-harshal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://github.com/harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://leetcode.com/u/harshal14ahire/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fa-solid fa-code text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://medium.com/@harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="Medium"><i class="fa-brands fa-medium text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://x.com/harshal_ah87612" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.threads.net/@harshal__ahire" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fa-brands fa-threads text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.instagram.com/harshal__ahire" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-emerald-300" href="mailto:harshal14ahire@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope text-lg"></i></a>
-          <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-emerald-300" href="tel:+917350552784" aria-label="Phone"><i class="fa-solid fa-phone text-lg"></i></a>
+        <div class="flex flex-col items-center gap-4">
+          <img class="profile-img" src="https://drive.google.com/uc?export=view&id=1TGtjB_3-BfHwu9ksm6DMSviu1vFLQjGf" alt="Harshal Ahire profile photo" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/harshal14ahire';" />
+          <div class="grid grid-cols-3 gap-2 text-center text-slate-300">
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.linkedin.com/in/ahire-harshal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://github.com/harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://leetcode.com/u/harshal14ahire/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fa-solid fa-code text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://medium.com/@harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="Medium"><i class="fa-brands fa-medium text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://x.com/harshal_ah87612" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.threads.net/@harshal__ahire" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fa-brands fa-threads text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.instagram.com/harshal__ahire" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-emerald-300" href="mailto:harshal14ahire@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope text-lg"></i></a>
+            <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-emerald-300" href="tel:+917350552784" aria-label="Phone"><i class="fa-solid fa-phone text-lg"></i></a>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section id="skills" class="mt-10">
+      <h2 class="text-2xl font-bold text-white">Top Skills by Category</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2">
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-indigo-300">Backend</h3>
+          <p class="mt-2 text-sm text-slate-300">Java 17, 21, 25, Spring Boot 3.x, 4.x, Spring WebFlux, REST APIs, Microservices</p>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-indigo-300">Frontend</h3>
+          <p class="mt-2 text-sm text-slate-300">Angular 19, React, Next.js, TypeScript, Material-UI, Tailwind CSS</p>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-indigo-300">Databases</h3>
+          <p class="mt-2 text-sm text-slate-300">PostgreSQL, MongoDB, MySQL, Oracle, Firebase, SQL optimization</p>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-indigo-300">Cloud</h3>
+          <p class="mt-2 text-sm text-slate-300">Docker, Kubernetes, AWS, PCF, Cloud-native</p>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-indigo-300">DevOps</h3>
+          <p class="mt-2 text-sm text-slate-300">GitLab CI/CD, Git, Maven, Gradle, Linux</p>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-indigo-300">Testing</h3>
+          <p class="mt-2 text-sm text-slate-300">JUnit 5, Mockito, SonarQube, Selenium, API testing</p>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-indigo-300">Architecture</h3>
+          <p class="mt-2 text-sm text-slate-300">Microservices, SOLID, Design Patterns, HLD/LLD, OOPS</p>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-indigo-300">AI/ML</h3>
+          <p class="mt-2 text-sm text-slate-300">Spring AI, Gemini SDK, LLM Integration, Generative AI</p>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-indigo-300">Messaging</h3>
+          <p class="mt-2 text-sm text-slate-300">Apache Kafka, Google PubSub, WebSockets, FCM</p>
+        </article>
+        <article class="glass rounded-2xl p-5">
+          <h3 class="font-semibold text-indigo-300">Soft Skills</h3>
+          <p class="mt-2 text-sm text-slate-300">Communication, Problem Solving, RCA, Leadership, Mentoring</p>
+        </article>
       </div>
     </section>
 
@@ -172,6 +230,11 @@
         </div>
         <div class="glass rounded-2xl p-4 md:col-span-2">
           <img class="stats-img" src="https://leetcard.jacoblin.cool/harshal14ahire?theme=dark&ext=activity" alt="LeetCode Stats" />
+        </div>
+        <div class="glass rounded-2xl p-4 md:col-span-2">
+          <a href="https://github.com/harshal14ahire" target="_blank" rel="noopener noreferrer">
+            <img class="stats-img" src="https://ghchart.rshah.org/6366F1/harshal14ahire" alt="GitHub contribution calendar" />
+          </a>
         </div>
       </div>
     </section>
@@ -275,19 +338,34 @@
     menuBtn.addEventListener("click", () => mobileNav.classList.toggle("hidden"));
     mobileNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => mobileNav.classList.add("hidden")));
 
-    const words = ["Full Stack", "Backend", "Frontend", "API Architect"];
+    const words = [
+      "Software Engineer - Full Stack",
+      "Senior Software Engineer - Full Stack",
+      "Backend Software Engineer",
+      "Full Stack Java Developer",
+      "API & Microservices Engineer"
+    ];
     const typingText = document.getElementById("typingText");
     let wordIndex = 0, charIndex = 0, deleting = false;
     function animateTyping() {
       const current = words[wordIndex];
-      typingText.textContent = current.slice(0, charIndex);
-      if (!deleting && charIndex < current.length) charIndex++;
-      else if (deleting && charIndex > 0) charIndex--;
-      else {
-        deleting = !deleting;
-        if (!deleting) wordIndex = (wordIndex + 1) % words.length;
+      if (!deleting) {
+        charIndex++;
+        typingText.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(animateTyping, 1200);
+          return;
+        }
+      } else {
+        charIndex--;
+        typingText.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+        }
       }
-      setTimeout(animateTyping, deleting ? 60 : charIndex === current.length ? 1200 : 110);
+      setTimeout(animateTyping, deleting ? 60 : 110);
     }
     animateTyping();
 
