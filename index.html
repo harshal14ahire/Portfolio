@@ -56,8 +56,15 @@
       object-fit: cover;
       box-shadow: 0 0 20px rgba(99, 102, 241, 0.25);
     }
+    .hero-actions a { text-align: center; }
     .social-glow:hover { box-shadow: 0 0 18px rgba(99,102,241,0.45); }
     .filter-btn.active { background: linear-gradient(90deg, #6366F1, #10B981); color: white; border-color: transparent; }
+    @media (max-width: 640px) {
+      .profile-img {
+        width: 8.5rem;
+        height: 8.5rem;
+      }
+    }
   </style>
 </head>
 <body class="font-sans antialiased">
@@ -97,13 +104,13 @@
   </header>
 
   <main class="mx-auto max-w-6xl px-4 pb-16 pt-10">
-    <section id="about" class="glass rounded-3xl p-8 md:p-12">
+    <section id="about" class="glass rounded-3xl p-6 sm:p-8 md:p-12">
       <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
-        <div>
-          <h1 class="text-4xl font-extrabold text-white md:text-5xl">Harshal Ahire</h1>
+        <div class="text-center md:text-left">
+          <h1 class="text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">Harshal Ahire</h1>
           <p class="mt-2 text-lg text-indigo-300"><span id="typingText" class="font-semibold text-white">Software Engineer - Full Stack</span></p>
-          <p class="mt-5 max-w-3xl text-slate-300">Software Engineer with 1.8 years of hands-on experience engineering scalable B2B SaaS platforms, distributed REST APIs, and high-throughput data processing workflows.</p>
-          <div class="mt-5 flex flex-wrap gap-2">
+          <p class="mt-5 max-w-3xl text-slate-300 md:max-w-3xl">Software Engineer with 1.8 years of hands-on experience engineering scalable B2B SaaS platforms, distributed REST APIs, and high-throughput data processing workflows.</p>
+          <div class="mt-5 flex flex-wrap justify-center gap-2 md:justify-start">
             <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">Python</span>
             <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">Java / Spring Boot</span>
             <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">React</span>
@@ -111,14 +118,14 @@
             <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">REST APIs</span>
             <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">GenAI</span>
           </div>
-          <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#experience" class="rounded-lg bg-indigoGlow px-5 py-2.5 font-semibold text-white hover:opacity-90">View Experience</a>
-            <a href="#contact" class="rounded-lg border border-white/20 px-5 py-2.5 font-semibold hover:bg-white/10">Quick Connect</a>
-            <a href="https://drive.google.com/file/d/1_Z-seH6qL-KdDSBFa0Wo305U---fVHr0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-emerald-400/40 px-5 py-2.5 font-semibold text-emerald-300 hover:bg-emerald-500/10">Download Resume</a>
+          <div class="hero-actions mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:justify-start">
+            <a href="#experience" class="w-full rounded-lg bg-indigoGlow px-5 py-2.5 font-semibold text-white hover:opacity-90 sm:w-auto">View Experience</a>
+            <a href="#contact" class="w-full rounded-lg border border-white/20 px-5 py-2.5 font-semibold hover:bg-white/10 sm:w-auto">Quick Connect</a>
+            <a href="https://drive.google.com/file/d/1_Z-seH6qL-KdDSBFa0Wo305U---fVHr0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full rounded-lg border border-emerald-400/40 px-5 py-2.5 font-semibold text-emerald-300 hover:bg-emerald-500/10 sm:w-auto">Download Resume</a>
           </div>
         </div>
         <div class="flex flex-col items-center gap-4">
-          <img class="profile-img" src="https://drive.google.com/uc?export=view&id=1TGtjB_3-BfHwu9ksm6DMSviu1vFLQjGf" alt="Harshal Ahire profile photo" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/harshal14ahire';" />
+          <img class="profile-img" src="https://drive.google.com/uc?export=view&id=1TGtjB_3-BfHwu9ksm6DMSviu1vFLQjGf" alt="Harshal Ahire profile photo" />
           <div class="grid grid-cols-3 gap-2 text-center text-slate-300">
             <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://www.linkedin.com/in/ahire-harshal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-lg"></i></a>
             <a class="social-glow rounded-xl border border-white/10 bg-white/5 p-3 hover:text-indigo-300" href="https://github.com/harshal14ahire" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
@@ -223,18 +230,18 @@
       <h2 class="text-2xl font-bold text-white">Live Developer Stats</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-2">
         <div class="glass rounded-2xl p-4">
-          <img class="stats-img" src="https://github-readme-stats.vercel.app/api?username=harshal14ahire&show_icons=true&theme=dark&hide_border=true&bg_color=111827" alt="GitHub Stats" />
+          <img class="stats-img" src="https://github-readme-stats.vercel.app/api?username=harshal14ahire&show_icons=true&theme=dark&hide_border=true&bg_color=111827" alt="GitHub Stats" onerror="this.onerror=null;this.src='https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=harshal14ahire&show_icons=true&theme=dark&hide_border=true&bg_color=111827';" />
         </div>
         <div class="glass rounded-2xl p-4">
           <img class="stats-img" src="https://streak-stats.demolab.com/?user=harshal14ahire&theme=dark&hide_border=true&background=111827" alt="GitHub Streak" />
         </div>
         <div class="glass rounded-2xl p-4 md:col-span-2">
-          <img class="stats-img" src="https://leetcard.jacoblin.cool/harshal14ahire?theme=dark&ext=activity" alt="LeetCode Stats" />
-        </div>
-        <div class="glass rounded-2xl p-4 md:col-span-2">
           <a href="https://github.com/harshal14ahire" target="_blank" rel="noopener noreferrer">
             <img class="stats-img" src="https://ghchart.rshah.org/6366F1/harshal14ahire" alt="GitHub contribution calendar" />
           </a>
+        </div>
+        <div class="glass rounded-2xl p-4 md:col-span-2">
+          <img class="stats-img" src="https://leetcard.jacoblin.cool/harshal14ahire?theme=dark&ext=activity" alt="LeetCode Stats" />
         </div>
       </div>
     </section>
