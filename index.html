@@ -102,7 +102,7 @@
         <div>
           <p class="mb-3 inline-flex items-center rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300">Open to Full Stack Opportunities</p>
           <h1 class="text-4xl font-extrabold text-white md:text-5xl">Harshal Ahire</h1>
-          <p class="mt-2 text-lg text-indigo-300">Software Engineer — <span id="typingText" class="font-semibold text-white"></span></p>
+          <p class="mt-2 text-lg text-indigo-300"><span id="typingText" class="font-semibold text-white">Software Engineer - Full Stack</span></p>
           <p class="mt-5 max-w-3xl text-slate-300">Software Engineer with 1.8 years of hands-on experience engineering scalable B2B SaaS platforms, distributed REST APIs, and high-throughput data processing workflows.</p>
           <div class="mt-5 flex flex-wrap gap-2">
             <span class="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-mono">Python</span>
@@ -339,19 +339,34 @@
     menuBtn.addEventListener("click", () => mobileNav.classList.toggle("hidden"));
     mobileNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => mobileNav.classList.add("hidden")));
 
-    const words = ["Full Stack", "Backend", "Frontend", "API Architect"];
+    const words = [
+      "Software Engineer - Full Stack",
+      "Senior Software Engineer - Full Stack",
+      "Backend Software Engineer",
+      "Full Stack Java Developer",
+      "API & Microservices Engineer"
+    ];
     const typingText = document.getElementById("typingText");
     let wordIndex = 0, charIndex = 0, deleting = false;
     function animateTyping() {
       const current = words[wordIndex];
-      typingText.textContent = current.slice(0, charIndex);
-      if (!deleting && charIndex < current.length) charIndex++;
-      else if (deleting && charIndex > 0) charIndex--;
-      else {
-        deleting = !deleting;
-        if (!deleting) wordIndex = (wordIndex + 1) % words.length;
+      if (!deleting) {
+        charIndex++;
+        typingText.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(animateTyping, 1200);
+          return;
+        }
+      } else {
+        charIndex--;
+        typingText.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+        }
       }
-      setTimeout(animateTyping, deleting ? 60 : charIndex === current.length ? 1200 : 110);
+      setTimeout(animateTyping, deleting ? 60 : 110);
     }
     animateTyping();
 
