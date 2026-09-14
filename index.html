@@ -84,7 +84,7 @@
           <li><a href="#education" class="hover:text-indigo-300">Education</a></li>
           <li><a href="#contact" class="hover:text-indigo-300">Contact</a></li>
           <li>
-            <a href="https://drive.google.com/file/d/1_Z-seH6qL-KdDSBFa0Wo305U---fVHr0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-indigoGlow px-4 py-2 font-medium text-white hover:opacity-90">Download Resume</a>
+            <a href="https://drive.google.com/file/d/1ikk7kfNkDbAZvAP7BsFSmPaXXO36PbjY/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="rounded-lg bg-indigoGlow px-4 py-2 font-medium text-white hover:opacity-90">Download Resume</a>
           </li>
         </ul>
       </div>
@@ -97,7 +97,7 @@
         <li><a href="#education" class="block rounded px-2 py-1 hover:bg-white/10">Education</a></li>
         <li><a href="#contact" class="block rounded px-2 py-1 hover:bg-white/10">Contact</a></li>
         <li>
-          <a href="https://drive.google.com/file/d/1_Z-seH6qL-KdDSBFa0Wo305U---fVHr0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="mt-1 block rounded-lg bg-indigoGlow px-4 py-2 text-center font-medium text-white">Download Resume</a>
+          <a href="https://drive.google.com/file/d/1ikk7kfNkDbAZvAP7BsFSmPaXXO36PbjY/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="mt-1 block rounded-lg bg-indigoGlow px-4 py-2 text-center font-medium text-white">Download Resume</a>
         </li>
       </ul>
     </nav>
@@ -121,7 +121,7 @@
           <div class="hero-actions mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:justify-start">
             <a href="#experience" class="w-full rounded-lg bg-indigoGlow px-5 py-2.5 font-semibold text-white hover:opacity-90 sm:w-auto">View Experience</a>
             <a href="#contact" class="w-full rounded-lg border border-white/20 px-5 py-2.5 font-semibold hover:bg-white/10 sm:w-auto">Quick Connect</a>
-            <a href="https://drive.google.com/file/d/1_Z-seH6qL-KdDSBFa0Wo305U---fVHr0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full rounded-lg border border-emerald-400/40 px-5 py-2.5 font-semibold text-emerald-300 hover:bg-emerald-500/10 sm:w-auto">Download Resume</a>
+            <a href="https://drive.google.com/file/d/1ikk7kfNkDbAZvAP7BsFSmPaXXO36PbjY/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full rounded-lg border border-emerald-400/40 px-5 py-2.5 font-semibold text-emerald-300 hover:bg-emerald-500/10 sm:w-auto">Download Resume</a>
           </div>
         </div>
         <div class="flex flex-col items-center gap-4">
@@ -343,6 +343,8 @@
     mobileNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => mobileNav.classList.add("hidden")));
 
     const words = [
+      "Forward Deployed Engineer",
+      "AI Engineer",
       "Software Engineer - Full Stack",
       "Senior Software Engineer - Full Stack",
       "Backend Software Engineer",
@@ -350,6 +352,8 @@
       "API & Microservices Engineer"
     ];
     const typingText = document.getElementById("typingText");
+    typingText.style.display = "inline-block";
+    typingText.style.minWidth = `${Math.max(...words.map((word) => word.length))}ch`;
     let wordIndex = 0, charIndex = 0, deleting = false;
     function animateTyping() {
       const current = words[wordIndex];
@@ -361,13 +365,14 @@
           setTimeout(animateTyping, 1200);
           return;
         }
-      } else {
+      } else if (charIndex > 1) {
         charIndex--;
         typingText.textContent = current.slice(0, charIndex);
-        if (charIndex === 0) {
-          deleting = false;
-          wordIndex = (wordIndex + 1) % words.length;
-        }
+      } else {
+        deleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        charIndex = 1;
+        typingText.textContent = words[wordIndex].slice(0, charIndex);
       }
       setTimeout(animateTyping, deleting ? 60 : 110);
     }
